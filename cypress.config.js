@@ -3,6 +3,7 @@ const { configureAllureAdapterPlugins } = require("@mmisty/cypress-allure-adapte
 
 module.exports = defineConfig({
   retries: 1,
+  video: false,
   e2e: {
     setupNodeEvents(on, config) {
       configureAllureAdapterPlugins(on, config);
