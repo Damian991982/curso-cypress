@@ -1,4 +1,4 @@
-export class commomPageElements {
+export class CommomPageElements {
   static get topMenu() {
     return {
       get home() {
