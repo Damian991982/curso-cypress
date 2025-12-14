@@ -25,4 +25,25 @@ describe(CommonPageData.testSuites.autenticacion, () => {
     Logger.verification("Verificar que se redirige al usuario a la pagina de inicio");
     CommonPageMethods.verifySignedUser(LoginData.validCredentials.username);
   });
+
+  it("Inicio de sesion invalido", () => {
+    Logger.stepNumber(1);
+    Logger.step("Navegar a la pagina de inicio");
+    CommonPageMethods.navigateToDemoBlaze();
+
+    Logger.stepNumber(2);
+    Logger.step("Hacer click en 'Log In' en la barra de navegacion");
+    CommonPageMethods.clickOnLoginOption();
+
+    Logger.stepNumber(3);
+    Logger.step("Ingresar un nombre de usuario y/o contraseña invalidos");
+    LoginMethods.insertUsername(LoginData.validCredentials.username);
+    LoginMethods.insertPassword("contrasenainvalida");
+
+    Logger.stepNumber(4);
+    Logger.step("Hacer click 'Log In' para iniciar sesion");
+    LoginMethods.clickOnLoginButton();
+    Logger.verification("Verificar que se muestre el mensaje indicado en el inicio de sesion");
+    LoginMethods.verifyWrongPasswordMessage();
+  });
 });
