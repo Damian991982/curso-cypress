@@ -8,7 +8,7 @@ export class PlaceOrderElements {
         return cy.get("input#country");
       },
       get city() {
-        return cy.get("input#country");
+        return cy.get("input#city");
       },
       get creditCard() {
         return cy.get("input#card");

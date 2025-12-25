@@ -9,6 +9,6 @@ export class ProductDetailsMethods {
     ProductDetailsElements.buttons.addToCart.should("be.visible");
   }
   static verifyProductAddedMessage() {
-    CommonPageMethods.verifyAlert("Product added");
+    CommonPageMethods.verifyAlert("Product added.");
   }
 }

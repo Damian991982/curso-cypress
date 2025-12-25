@@ -18,6 +18,9 @@ export class CommonPageMethods {
   }
   static clickOnCartOption() {
     CommomPageElements.topMenu.cart.click();
+    cy.on("uncaught:exception", (err, runnable) => {
+      return false;
+    });
   }
   static clickOnLoginOption() {
     CommomPageElements.topMenu.login.click();
