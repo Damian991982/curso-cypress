@@ -4,7 +4,8 @@ import { expect } from "chai";
 
 export class CommonPageMethods {
   static navigateToDemoBlaze() {
-    cy.clearCookies();
+    cy.clearAllCookies();
+    cy.clearLocalStorage();
     cy.visit(CommonPageData.url);
   }
   static clickOnHomeOption() {
