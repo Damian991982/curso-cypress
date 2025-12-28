@@ -54,7 +54,7 @@ export class CommonPageMethods {
   }
   static logout() {
     cy.get("body").then(($body) => {
-      if ($body.find("#logout2").lenght > 0) {
+      if ($body.find('#logout2[style="display: block;"]').lenght > 0) {
         CommomPageElements.topMenu.logout.click();
       }
     });
