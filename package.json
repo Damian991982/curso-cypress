@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
-    "ejecutar-pruebas": "npx cypress run --headed --env allure=true",
+    "ejecutar-pruebas": "npx cypress run --env allure=true",
+    "ejecutar-pruebas-headed": "npx cypress run --headed --env allure=true",
     "ejecutar-pruebas-especifico": "npx cypress run --headed --env allure=true --spec \"cypress/e2e/tests/autenticacion.cy.js\"",
     "generar-reporte": "allure generate allure-results -o allure-report --clean",
     "abrir-reporte": "npx allure open",
